@@ -13,12 +13,12 @@ Rules:
 
 ## Folders
 
-- components/layout
-- components/sections
-- components/partials
-- components/ui
-- services
-- utils
+- src/components/layout
+- src/components/sections
+- src/components/partials
+- src/components/ui
+- src/services
+- src/utils
 
 ## Files
 

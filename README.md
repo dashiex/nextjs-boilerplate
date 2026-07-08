@@ -41,29 +41,36 @@ components, and scalable folder structures.
 
 # 📂 Project Structure
 
-Root-level folders (no `src/` directory). The folders marked ✅ are scaffolded
-by the [bootstrap step](#-project-bootstrap); the rest are added as the roadmap
-progresses.
+Application code lives under `src/`; `public/`, config files, and `.env.*` stay
+at the repo root. The folders marked ✅ are scaffolded by the
+[bootstrap step](#-project-bootstrap); the rest are added as the roadmap
+progresses. The `@/*` import alias resolves to `src/*`.
 
 ```text
 .
-├── app/                 # App Router (pages, layouts, globals.css)
+├── public/              # Static assets (stays at root)
+├── src/
+│   ├── app/             # App Router (pages, layouts, globals.css)
+│   │
+│   ├── components/      # ✅ scaffolded
+│   │   ├── ui/          # Reusable UI (Button, Input, Card)
+│   │   ├── layout/      # Header, Footer, Sidebar
+│   │   ├── sections/    # Page sections
+│   │   └── partials/    # Shared components
+│   │
+│   ├── services/        # ✅ API calls
+│   ├── utils/           # ✅ Utility functions
+│   │
+│   ├── features/        # Feature-based modules (auth, blog, services) — planned
+│   ├── hooks/           # Custom React hooks — planned
+│   ├── lib/             # Third-party configs (axios, auth, prisma) — planned
+│   ├── types/           # TypeScript types/interfaces — planned
+│   ├── constants/       # Constants — planned
+│   └── styles/          # Global styles (if needed) — planned
 │
-├── components/          # ✅ scaffolded
-│   ├── ui/              # Reusable UI (Button, Input, Card)
-│   ├── layout/          # Header, Footer, Sidebar
-│   ├── sections/        # Page sections
-│   └── partials/        # Shared components
-│
-├── services/            # ✅ API calls
-├── utils/               # ✅ Utility functions
-│
-├── features/            # Feature-based modules (auth, blog, services) — planned
-├── hooks/               # Custom React hooks — planned
-├── lib/                 # Third-party configs (axios, auth, prisma) — planned
-├── types/               # TypeScript types/interfaces — planned
-├── constants/           # Constants — planned
-└── styles/              # Global styles (if needed) — planned
+├── next.config.ts       # Config files stay at root
+├── tsconfig.json        # (@/* → src/*)
+└── package.json
 ```
 
 ---
