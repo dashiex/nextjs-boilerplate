@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "setup": "node scripts/setup.mjs --force",
     "postinstall": "node scripts/setup.mjs"
-
   },
   "dependencies": {
     "next": "16.2.10",
