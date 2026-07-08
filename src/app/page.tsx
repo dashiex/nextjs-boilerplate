@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Button from "@/components/ui/Button/Button";
+import Container from "@/components/ui/Container";
 
 export default function Home() {
   return (
@@ -59,6 +61,19 @@ export default function Home() {
             Documentation
           </a>
         </div>
+        <div className="flex gap-4">
+          <Button>Primary</Button>
+          <Button variant="secondary">Secondary</Button>
+        </div>
+
+        <Container>
+          <h2 className="text-2xl font-bold">Heading</h2>
+          <p className="text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum, nulla nec
+            condimentum tincidunt, nisi risus lacinia sapien, sit amet tincidunt nisi nisl eget
+            nisl. Nunc euismod tincidunt velit, euismod aliquet nisl. Aliquam erat volutpat.
+          </p>
+        </Container>
       </main>
     </div>
   );
